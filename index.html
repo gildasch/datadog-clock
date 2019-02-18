@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <style>
+         body {
+             margin: 0;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: space-evenly;
+             height: 100vh;
+         }
+         #clock {
+             font-family: monospace;
+             font-size: 30vw;
+         }
+        </style>
+    </head>
+    <body>
+        <div id="clock">00:00</div>
+        <script>
+         setInterval(updateClock, 10)
+
+         function updateClock() {
+           document.getElementById("clock").innerHTML=new Date().getHours() + ":" + new Date().getMinutes()
+         }
+        </script>
+    </body>
+</html>
