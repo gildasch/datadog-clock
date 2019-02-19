@@ -8,21 +8,28 @@
              flex-direction: column;
              align-items: center;
              justify-content: space-evenly;
-             height: 100vh;
+             overflow: hidden;
          }
          #clock {
              font-family: monospace;
-             font-size: 90vh;
+         }
+         svg {
+             width: 100vw;
+             height: 100vh;
          }
         </style>
     </head>
     <body>
-        <div id="clock">00:00</div>
+        <div>
+            <svg width="100%" height="100%" viewBox="0 0 40 18">
+                <text id="clock" x="0" y="13" fill="black">00:00</text>
+            </svg>
+        </div>
         <script>
          setInterval(updateClock, 10)
 
          function updateClock() {
-           document.getElementById("clock").innerHTML=new Date().getHours() + ":" + new Date().getMinutes()
+           document.getElementById("clock").textContent=new Date().getHours() + ":" + new Date().getMinutes()
          }
         </script>
     </body>
