@@ -29,7 +29,7 @@
          setInterval(updateClock, 10)
 
          function updateClock() {
-           document.getElementById("clock").textContent=new Date().toISOString().substr(11, 5)
+           document.getElementById("clock").textContent=new Date().toLocaleTimeString('fr').substr(0, 5)
          }
         </script>
     </body>
